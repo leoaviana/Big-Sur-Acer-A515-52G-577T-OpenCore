@@ -25,7 +25,7 @@
  - [ ] Qualcomm Wifi Card, You'll need to replace it with a BroadCom card, In my case I used a Bcm94350zae (CN-0VW3T3).
 
 ### Important
- Please add `SystemSerialNumber`, `SystemUUID` and `MLB`.<br/>
+ Please change `SystemSerialNumber`, `SystemUUID` and `MLB` in the config.plist file located at the EFI folder, see Basic Installation section below.<br/>
  With the Bcm94350zae I used, bluetooth was not working (not even on windows or linux), To make it work I needed to cover
  some of the card's pins, I tried to search on the web the pictures of the pins needed to isolate but unfortunately I wasn't able to find it anymore. Note that this
  may not happen with you, but if it does and I still hadn't updated this, feel free to open an issue about that and I'll try to help.
@@ -48,7 +48,7 @@
 - Create a Bootable USB for MacOS by using by Dortania's [OpenCore-Install-Guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/).
 - Install MacOS to SSD / Hard drive. (While installing, connect USB keyboard and mouse).
 - Copy **ALL**  content of this repo inside the EFI partition of SSD / Hard drive.
-- **[IMPORTANT]** Make sure to Generate system definitions of MacBook pro 15.2 in config.plist file using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) & add `SystemSerialNumber`, `SystemUUID` and `MLB`.
+- **[IMPORTANT]** Make sure to Generate system definitions of MacBook pro 15.2 in config.plist file using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) & change `SystemSerialNumber`, `SystemUUID` and `MLB` values to your generated values..
 
 ### Post Installation
 - If you have Installed MacOS on SSD, Enable TRIM using following command:
